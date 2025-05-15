@@ -21,6 +21,61 @@
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/responsive.css"/>
         <link rel="stylesheet" href="demos/it-business/it-business.css" />
+
+            <style>
+        .admissions-button {
+ position: relative;
+ padding: 12px 35px;
+ background: #fec195;
+ font-size: 17px;
+ font-weight: 500;
+ color: #181818;
+ border: 3px solid #fec195;
+ border-radius: 8px;
+ box-shadow: 0 0 0 #fec1958c;
+ transition: all 0.3s ease-in-out;
+ cursor: pointer;
+ text-decoration: none; /* Remove default underline */
+ overflow: hidden; /* Hide stars initially */
+}
+
+.admissions-button .star {
+ position: absolute;
+ width: 0;
+ height: auto;
+ filter: drop-shadow(0 0 0 #fffdef);
+ z-index: -1;
+ transition: all 0.5s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.admissions-button:hover {
+ background: transparent;
+ color: #fec195;
+ box-shadow: 0 0 25px #fec1958c;
+ transform: scale(1.1);
+}
+
+.admissions-button:hover .star-1 {
+ top: -80%;
+ left: -30%;
+ width: 25px;
+ filter: drop-shadow(0 0 10px #fffdef);
+}
+
+.admissions-button:hover .star-2 {
+ top: -25%;
+ left: 10%;
+ width: 15px;
+ filter: drop-shadow(0 0 10px #fffdef);
+}
+
+.admissions-button:hover .star-3 {
+ top: 55%;
+ left: 25%;
+ width: 5px;
+ filter: drop-shadow(0 0 10px #fffdef);
+}
+    </style>
     </head>
     <body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="#252840">  
         <!-- start header -->
@@ -45,24 +100,89 @@
                         <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> 
                             <ul class="navbar-nav"> 
                                 <li class="nav-item"><a href="demo-it-business.html" class="nav-link">Home</a></li>
-                                <li class="nav-item"><a href="demo-it-business-about.html" class="nav-link">About</a></li> 
-                                <li class="nav-item dropdown dropdown-with-icon-style02">
-                                    <a  href="demo-it-business-services.html" class="nav-link">Services</a>
+                                <li class="nav-item"><a href="demo-it-business-about.html" class="nav-link">About Mahathmam</a>
                                     <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> 
-                                        <li><a href="demo-it-business-services-details.html"><i class="bi bi-briefcase"></i>Data analytics</a></li>
-                                        <li><a href="demo-it-business-services-details.html"><i class="bi bi-clipboard-data"></i>Finance consulting</a></li>
-                                        <li><a href="demo-it-business-services-details.html"><i class="bi bi-peace"></i>Technology innovation</a></li>
-                                        <li><a href="demo-it-business-services-details.html"><i class="bi bi-bar-chart-line"></i>Digital commerce</a></li>
-                                        <li><a href="demo-it-business-services-details.html"><i class="bi bi-send-check"></i>Artificial intelligence</a></li>
-                                        <li><a href="demo-it-business-services-details.html"><i class="bi bi-globe2"></i>Cloud computing</a></li>
+                                        <li><a href="demo-it-business-services-details.html"><i class="bi bi-briefcase"></i>About Us</a></li>
+                                        <li><a href="demo-it-business-services-details.html"><i class="bi bi-clipboard-data"></i>Board Members</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="nav-item dropdown dropdown-with-icon-style02">
+                                    <a  href="demo-it-business-services.html" class="nav-link">Our Courses </a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> 
+                                        <li><a href="demo-it-business-services-details.html"><i class="bi bi-briefcase"></i>DME</a></li>
+                                        <li><a href="demo-it-business-services-details.html"><i class="bi bi-clipboard-data"></i>DCS</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a href="demo-it-business-case-studies.html" class="nav-link">Case studies</a></li>
-                                <li class="nav-item"><a href="demo-it-business-blog.html" class="nav-link">Blog</a></li>
-                                <li class="nav-item"><a href="demo-it-business-contact.html" class="nav-link">Contact</a></li>
+                                <li class="nav-item"><a href="demo-it-business-case-studies.html" class="nav-link">Infrastructure</a></li>
+                                <li class="nav-item"><a href="demo-consulting-news.html" class="nav-link">News & Events</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> 
+                                        <li><a href="demo-it-business-services-details.html"><i class="bi bi-briefcase"></i>Recent Events</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a href="demo-it-business-contact.html" class="nav-link">Contact Us</a></li>
                             </ul>
                         </div>
+                                   <li><a href="#" class="admissions-button">Admissions
+          <div class="star star-1">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 784.11 815.53">
+                  <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,
+                         378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,
+                         407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,
+                         -29.38 -371.16,-197.69 -392.06,-407.78z" />
+              </svg>
+          </div>
+          <div class="star star-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784.11 815.53">
+                  <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,
+                         407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,
+                         -210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,
+                         -197.69 -392.06,-407.78z" />
+              </svg>
+          </div>
+          <div class="star star-3">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 784.11 815.53">
+                  <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,
+                         378.41 -392.05,407.78 207.96,29.37 371.12,197.68
+                         392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,
+                         -407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" />
+              </svg>
+          </div>
+          <div class="star star-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784.11 815.53">
+                  <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,
+                         29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37
+                         392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        />
+              </svg>
+          </div>
+          <div class="star star-5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784.11 815.53">
+                  <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,
+                         29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37
+                         392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        />
+              </svg>
+          </div>
+          <div class="star star-6">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784.11 815.53">
+                  <path class="fil0"
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,
+                         29.37 371.12,197.68 392.05,407.74 20.93,
+                         -210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,
+                         -197.69 -392.06,-407.78z" />
+              </svg>
+          </div>
+        </a></li>
                     </div>
                     <div class="col-auto col-xxl-3 col-lg-2 text-end d-none d-sm-flex">
                         <div class="header-icon">
